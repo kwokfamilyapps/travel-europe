@@ -15,8 +15,10 @@ h1 { font-family: Georgia, serif; font-size: 1.3rem; color: #2a5c2a; margin: 0.2
 .legend { background: #f5efe0; border: 1px solid #d8d0c0; border-radius: 10px; padding: 0.4rem 0.7rem; font-size: 0.5rem; margin: 0.5rem 0; line-height: 1.6; }
 .legend b { font-size: 0.55rem; }
 .legend .dot { display: inline-block; width: 0.6rem; height: 0.6rem; border-radius: 50%; margin-right: 0.3rem; }
-.hotel-list { background: #f5efe0; border: 1px solid #d8d0c0; border-radius: 10px; padding: 0.4rem 0.7rem; font-size: 0.5rem; }
-.hotel-list h3 { font-size: 0.6rem; margin: 0.2rem 0; color: #2a5c2a; }
+.hotel-list { background: #f5efe0; border: 1px solid #d8d0c0; border-radius: 10px; padding: 0.4rem 0.7rem; font-size: 0.62rem; }
+.hotel-list h3 { font-size: 0.72rem; margin: 0.3rem 0; color: #2a5c2a; }
+.hotel-list .hi { margin-bottom: 0.5rem; line-height: 1.7; }
+.hotel-list .ha { color: #4a4840; font-size: 0.55rem; }
 .leaflet-popup-content { font-size: 0.5rem !important; }
 .leaflet-control-zoom a { font-size: 0.7rem !important; width: 1.2rem !important; height: 1.2rem !important; line-height: 1.2rem !important; }
 .hnum { background: #2a5c2a; color: #fff; border-radius: 50%; width: 1.3rem; height: 1.3rem; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; font-weight: bold; border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,0.4); }
@@ -39,7 +41,7 @@ h1 { font-family: Georgia, serif; font-size: 1.3rem; color: #2a5c2a; margin: 0.2
 </div>
 <div class="hotel-list">
 <h3>🏠 住宿一覽（順序）</h3>
-1. Apartment neuf — 9/9-14 · 巴黎 · 5樓有電梯2. Ronald's House — 9/14-21 · Talmont 沿海3. City Hotel St. George — 9/21-24 · 漢堡 · 住地下4. Hostel（4人房） — 9/24-28 · 柏林 · 要上一層5. Ocak Aparthotel — 9/28-30 · 柏林 · 有電梯6. Smíchov Apartment — 9/30-10/8 · 布拉格 · G/F7. The McEwan — 10/8-12 · 愛丁堡（已訂）8. Riverside House — 10/12-16 · 約克9. Hidden Gem, Ealing — 10/16-19 · 倫敦 · 2/F
+<div class="hi">1. <b>Apartment neuf</b> — 9/9-14 · 巴黎 · 5樓有電梯<br><span class="ha">📍 2 bis Boulevard Carnot, 94140 Alfortville</span></div><div class="hi">2. <b>Ronald's House</b> — 9/14-21 · Talmont 沿海<br><span class="ha">📍 3 Avenue de L'Estuaire, 17120 Talmont-sur-Gironde</span></div><div class="hi">3. <b>City Hotel St. George</b> — 9/21-24 · 漢堡 · 住地下<br><span class="ha">📍 Stiftstraße 31, 20099 Hamburg</span></div><div class="hi">4. <b>Hostel（4人房）</b> — 9/24-28 · 柏林 · 要上一層<br><span class="ha">📍 Lückstraße 17, 10317 Berlin</span></div><div class="hi">5. <b>Ocak Aparthotel</b> — 9/28-30 · 柏林 · 有電梯<br><span class="ha">📍 Jülicher Straße 15, 13357 Berlin</span></div><div class="hi">6. <b>Smíchov Apartment</b> — 9/30-10/8 · 布拉格 · G/F<br><span class="ha">📍 U Santošky 955/22, 150 00 Praha 5</span></div><div class="hi">7. <b>The McEwan</b> — 10/8-12 · 愛丁堡（已訂）<br><span class="ha">📍 2 McEwan Walk, Fountainbridge, Edinburgh EH3 8FS</span></div><div class="hi">8. <b>Riverside House</b> — 10/12-16 · 約克<br><span class="ha">📍 11 Earlsborough Terrace, York YO30 7BQ</span></div><div class="hi">9. <b>Hidden Gem, Ealing</b> — 10/16-19 · 倫敦 · 2/F<br><span class="ha">📍 98 Warwick Rd, Ealing, London W5 5PT</span></div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
