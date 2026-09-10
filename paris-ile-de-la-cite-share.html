@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>巴黎導覽 — 西堤島篇｜巴黎聖母院深度介紹</title>
+<style>
+html { font-size: 32px; }
+@media (max-width: 600px) { html { font-size: 28px; } }
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 0;
+  background: #f0e8d8;
+  color: #1a1a16;
+  font-family: "Noto Sans TC", "PingFang HK", "Microsoft JhengHei", "Helvetica Neue", system-ui, sans-serif;
+  line-height: 2.0;
+  -webkit-text-size-adjust: 100%;
+}
+.wrap { max-width: 44rem; margin: 0 auto; padding: 1rem 0.9rem 3rem; }
+header.hero {
+  background: #2a2a22; color: #f0e8d8;
+  padding: 1.8rem 1rem 1.6rem; text-align: center;
+  border-bottom: 6px solid #4a7a4a;
+}
+header.hero h1 { font-family: Georgia, "Songti TC", serif; font-size: 1.5rem; margin: 0; font-weight: 500; line-height: 1.5; }
+header.hero .en { display: block; font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: #c96442; margin-top: 0.45rem; }
+header.hero .sub { font-size: 0.62rem; color: #d8d0c0; margin-top: 0.5rem; line-height: 1.7; }
+header.hero .badge { display: inline-block; margin-top: 0.7rem; font-size: 0.55rem; padding: 0.15rem 0.6rem; border: 1px solid #4a7a4a; border-radius: 999px; color: #a8c8a8; }
+h2 { font-family: Georgia, serif; font-size: 1.05rem; color: #2a2a22; margin: 2.2rem 0 0.7rem; padding-bottom: 0.3rem; border-bottom: 3px solid #4a7a4a; font-weight: 500; line-height: 1.5; }
+h3 { font-size: 0.8rem; color: #4a7a4a; margin: 1.4rem 0 0.35rem; line-height: 1.6; }
+p { font-size: 0.75rem; margin: 0.5rem 0; }
+ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+li { font-size: 0.75rem; margin: 0.35rem 0; }
+strong { color: #2a2a22; }
+.hl { background: #e8dcc0; padding: 0.05rem 0.25rem; border-radius: 4px; }
+.card {
+  background: #f5efe0; border: 1px solid #d8d0c0; border-radius: 14px;
+  padding: 0.85rem 0.9rem; margin: 0.9rem 0;
+}
+.card.dark { background: #2a2a22; border-color: #2a2a22; color: #f0e8d8; }
+.card.dark p, .card.dark li { color: #e0d8c8; }
+.card.dark strong { color: #f0e8d8; }
+.card.warn { background: #f5e6de; border-color: #e0b8a0; }
+.card.tip { background: #e8f0e4; border-color: #b8d0b0; }
+table { width: 100%; border-collapse: collapse; margin: 0.8rem 0; font-size: 0.68rem; }
+th, td { border: 1px solid #d8d0c0; padding: 0.5rem 0.55rem; text-align: left; vertical-align: top; line-height: 1.7; }
+th { background: #2a2a22; color: #f0e8d8; font-weight: 500; }
+tbody tr:nth-child(even) { background: #f5efe0; }
+.tw { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin: 0.8rem 0; }
+@media (max-width: 600px) { .photo-grid { grid-template-columns: 1fr; } }
+figure { margin: 0; background: #f5efe0; border: 1px solid #d8d0c0; border-radius: 14px; overflow: hidden; }
+figure img { width: 100%; display: block; }
+figcaption { font-size: 0.6rem; color: #4a4840; padding: 0.5rem 0.6rem; line-height: 1.7; }
+ol.steps { padding-left: 1.3rem; }
+ol.steps li { font-size: 0.75rem; margin: 0.5rem 0; }
+.foot { margin-top: 2.5rem; padding-top: 1rem; border-top: 3px solid #4a7a4a; font-size: 0.6rem; color: #4a4840; line-height: 1.9; }
+.foot a { color: #4a7a4a; word-break: break-all; }
+.toc { background: #f5efe0; border: 1px solid #d8d0c0; border-radius: 14px; padding: 0.8rem 1rem; margin: 1rem 0; }
+.toc a { color: #2a2a22; text-decoration: none; font-size: 0.72rem; display: block; padding: 0.25rem 0; border-bottom: 1px dashed #d8d0c0; }
+.toc a:last-child { border-bottom: none; }
+.num { display: inline-block; width: 1.5rem; height: 1.5rem; line-height: 1.5rem; text-align: center; background: #4a7a4a; color: #fff; border-radius: 50%; font-size: 0.65rem; margin-right: 0.4rem; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>🗼 巴黎導覽<span class="en">Île de la Cité · Paris</span></h1>
+  <div class="sub">西堤島篇 — 市政廳 · Hôtel-Dieu · 巴黎聖母院<br>2026年09月10日</div>
+  
+</header>
+
+<div class="wrap">
+
+<div class="toc">
+  <a href="#route">📍 建議路線</a>
+  <a href="#hoteldeville">🏛️ 一、巴黎市政廳 &amp; Châtelet 劇院</a>
+  <a href="#hoteldieu">🏥 二、Hôtel-Dieu（主宮醫院）</a>
+  <a href="#notredame">⛪ 三、巴黎聖母院（重點）</a>
+  <a href="#nearby">🧭 四、順路加遊</a>
+  <a href="#coffee">☕ 五、咖啡控專區</a>
+  <a href="#practical">🎫 六、實用資訊</a>
+  <a href="#secrets">🤫 七、三個秘密</a>
+  <a href="#refs">📚 資料來源</a>
+</div>
+
+
+
+<h2 id="route">📍 建議路線</h2>
+<p>沿塞納河右岸往西，一日行完西堤島精華（建議路線）：</p>
+<ol class="steps">
+  <li><span class="num">1</span><strong>巴黎市政廳</strong> Hôtel de Ville（+ 對面 Place du Châtelet 兩座劇院）</li>
+  <li><span class="num">2</span><strong>Hôtel-Dieu</strong> 主宮醫院（聖母院廣場北側）</li>
+  <li><span class="num">3</span><strong>巴黎聖母院</strong> Cathédrale Notre-Dame de Paris ★</li>
+</ol>
+
+<h2 id="hoteldeville">🏛️ 一、巴黎市政廳 &amp; Châtelet 劇院</h2>
+
+<h3>巴黎市政廳 Hôtel de Ville</h3>
+<ul>
+  <li><strong>位置</strong>：Place de l'Hôtel de Ville, 75004（4 區）</li>
+  <li><strong>現建築</strong>：1874–1882 年重建 —— 原本嘅文藝復興建築喺 1871 年巴黎公社期間被大火燒毀</li>
+  <li><strong>風格</strong>：新文藝復興（Neo-Renaissance）</li>
+  <li><strong>正面</strong>：中央係一座<strong>尖頂鐘塔</strong>，立面有 <strong>108 尊雕像</strong>（歷代名人、藝術家、科學家），兩側有 4 座小塔</li>
+  <li><strong>廣場</strong>：冬天變溜冰場，夏天變人造沙灘（Paris Plages）</li>
+</ul>
+
+<div class="card warn">
+<p><strong>⚠️ 市政廳本身冇圓頂</strong> —— 只有中央尖塔。</p>
+<p>市政廳正面隔住條馬路嘅 <strong>Place du Châtelet</strong>：</p>
+<div class="tw">
+<table>
+<thead><tr><th>建築</th><th>落成</th><th>特徵</th></tr></thead>
+<tbody>
+<tr><td><strong>Théâtre du Châtelet</strong></td><td>1862</td><td>半圓頂 + 正面柱廊，北側</td></tr>
+<tr><td><strong>Théâtre de la Ville</strong><br>（Sarah-Bernhardt）</td><td>1862</td><td>同款半圓頂，南側對稱</td></tr>
+</tbody>
+</table>
+</div>
+<p>兩座都由建築師 <strong>Gabriel Davioud</strong> 設計，一南一北對住，係巴黎少見嘅「雙劇院」廣場。</p>
+</div>
+
+<h2 id="hoteldieu">🏥 二、Hôtel-Dieu（主宮醫院）</h2>
+<ul>
+  <li><strong>身份</strong>：巴黎最古老嘅醫院，相傳 <strong>651 年</strong>由巴黎主教 Saint Landry 創立</li>
+  <li><strong>現建築</strong>：1868–1878 年重建，新文藝復興風格，係 19 世紀大型公共建築嘅代表作</li>
+  <li><strong>位置</strong>：就喺聖母院廣場（Parvis Notre-Dame）北側，隔籬就係聖母院</li>
+  <li><strong>今日</strong>：仍然運作中嘅公立醫院（AP-HP 系統），並設有急救中心</li>
+  <li><strong>小知識</strong>：中世紀時 Hôtel-Dieu 會「同床共枕」—— 一張床可以瞓 2–4 個病人，係當時嘅醫療現實</li>
+</ul>
+
+<h2 id="notredame">⛪ 三、巴黎聖母院 Cathédrale Notre-Dame de Paris</h2>
+
+<div class="card dark">
+<p><strong>一句話</strong>：1163 年動工、1345 年完工，哥德式建築嘅起點之一；2019 年 4 月 15 日大火後，2024 年 12 月重開。</p>
+</div>
+
+<h3>（一）西立面 —— 由地面向上睇</h3>
+
+<h3>① 三個大門（左 → 右，即南 → 北）</h3>
+<div class="tw">
+<table>
+<thead><tr><th>位置</th><th>名稱</th><th>睇咩</th></tr></thead>
+<tbody>
+<tr><td>左（南）</td><td><strong>聖母門</strong><br>Portail de la Vierge</td><td>聖母被聖者同天使圍繞</td></tr>
+<tr><td>中</td><td><strong>最後審判門</strong><br>Portail du Jugement Dernier</td><td>最精彩 —— 門楣雕「最後審判」：天使秤靈魂、魔鬼拉人落地獄</td></tr>
+<tr><td>右（北）</td><td><strong>聖安娜門</strong><br>Portail Sainte-Anne</td><td><strong>最古老</strong>（12 世紀），上面有大主教為國王受洗嘅浮雕</td></tr>
+</tbody>
+</table>
+</div>
+<p>三個門洞都係「尖券」層層遞進縮入去，兩側雕滿聖經人物 —— 中世紀呢啲就係「窮人嘅聖經」。</p>
+
+<h3>② 國王廊（三個門上面一排）</h3>
+<ul>
+  <li>28 尊<strong>猶太國王</strong>雕像</li>
+  <li>1793 年法國大革命，激進派當佢哋係法國國王，拉晒落地斬頭</li>
+  <li>直到 <strong>1977 年</strong>，先喺巴黎 9 區一個建築工地地底搵返 <strong>21 個頭</strong></li>
+  <li>原件而家擺喺<strong>克呂尼博物館</strong>（Musée de Cluny）</li>
+</ul>
+
+<h3>③ 玫瑰花窗（正面嗰個）</h3>
+<div class="card warn">
+<p>正面（西立面）玫瑰窗直徑 <strong>9.6 米</strong>，係三個玫瑰窗之中<strong>最細</strong>嘅一個。</p>
+<p>⚠️ <strong>注意</strong>：正面玫瑰窗嘅玻璃其實係 <strong>19 世紀重製</strong>，唔係 13 世紀真跡。</p>
+<p>真正最靚、最大嗰兩個喺<strong>南北翼</strong>：北翼約 1250 年、南翼約 1260 年，直徑 <strong>12.9 米</strong>，由國王路易九世（聖路易）捐贈。</p>
+</div>
+
+<h3>④ 兩座鐘樓（69 米）</h3>
+<ul>
+  <li>南塔 1220–1240 年、北塔 1235–1250 年 —— 呢兩座係聖母院<strong>最後完工</strong>嘅主體</li>
+  <li>由嗰時一直到 1889 年艾菲爾鐵塔落成之前，都係<strong>巴黎最高建築</strong></li>
+  <li>2025 年 9 月塔樓重新開放，新導覽路線全程 <strong>424 級樓梯</strong>，冇電梯</li>
+</ul>
+
+<h3>⑤ 後面嘅尖塔（96 米）</h3>
+<ul>
+  <li>原版 13 世紀起（約 1220–1230），1786 年因失修被拆除</li>
+  <li>19 世紀由建築師 <strong>Viollet-le-Duc</strong> 重建（鉛包橡木結構，重約 750 噸）</li>
+  <li><strong>2019 年 4 月 15 日</strong>大火燒塌，2024 年按原設計重建</li>
+  <li>🕯️ 圍住尖塔嘅 <strong>12 使徒銅像</strong>，喺火災前 4 日（4 月 11 日）啱啱好拆走送去維修 —— 全組避過一劫</li>
+</ul>
+
+<h3>（二）入到去睇咩</h3>
+<ul>
+  <li><strong>中殿（Nave）</strong>：5 條走廊。留意牆身好薄、窗開得好大 —— 因為力量由外面嘅飛扶壁撐住。呢度就係「哥德式」嘅起點</li>
+  <li><strong>南北翼玫瑰窗</strong>：全場最靚嘅彩色玻璃，坐低慢慢睇</li>
+  <li><strong>管風琴</strong>：由 Cavaillé-Coll 於 1868 年重建嘅名琴</li>
+  <li><strong>荊棘冠</strong>（相傳耶穌受難時戴嘅）：2019 大火中由消防員冒死搶救出嚟</li>
+</ul>
+
+<h3>（三）八個關鍵年份</h3>
+<div class="tw">
+<table>
+<thead><tr><th>年份</th><th>事件</th></tr></thead>
+<tbody>
+<tr><td>1163</td><td>動工（主教 Maurice de Sully 發起）</td></tr>
+<tr><td>1345</td><td>完工 —— 足足起咗近 200 年</td></tr>
+<tr><td>1431</td><td>英格蘭亨利六世在此加冕為法王</td></tr>
+<tr><td>1804</td><td>拿破崙加冕（大衛名畫嘅場景）</td></tr>
+<tr><td>1831</td><td>雨果《鐘樓駝俠》出版 → 全民呼籲救聖母院</td></tr>
+<tr><td>1844–64</td><td>Viollet-le-Duc 大修，加尖塔同奇美拉石獸</td></tr>
+<tr><td>2019/04/15</td><td>大火 —— 600 名消防員打足 15 個鐘</td></tr>
+<tr><td>2024/12</td><td>重開；2025 年 9 月塔樓重開</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="nearby">🧭 四、順路加遊</h2>
+<div class="tw">
+<table>
+<thead><tr><th>景點</th><th>一句話</th><th>步行</th></tr></thead>
+<tbody>
+<tr><td><strong>Sainte-Chapelle</strong><br>聖徒禮拜堂</td><td>13 世紀，15 幅 15 米高彩色玻璃，公認巴黎最靚嘅玻璃窗</td><td>約 8 分鐘</td></tr>
+<tr><td><strong>Conciergerie</strong><br>古監獄</td><td>大革命時期監獄，瑪麗·安東尼最後嘅囚室</td><td>約 7 分鐘</td></tr>
+<tr><td><strong>Square Jean-XXIII</strong></td><td>聖母院後花園 —— 睇東面飛扶壁最佳位置</td><td>約 4 分鐘</td></tr>
+<tr><td><strong>Pont Neuf</strong><br>新橋</td><td>巴黎現存最古老嘅橋（1607 年落成）</td><td>約 10 分鐘</td></tr>
+<tr><td><strong>Marché aux Fleurs</strong><br>花市</td><td>聖路易島橋頭，1900 年起營業</td><td>約 9 分鐘</td></tr>
+<tr><td><strong>Berthillon</strong></td><td>聖路易島，巴黎最有名嘅雪糕</td><td>約 12 分鐘</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2 id="coffee">☕ 五、咖啡控專區</h2>
+<p>西堤島一帶嘅 specialty coffee（精品咖啡）：</p>
+<div class="tw">
+<table>
+<thead><tr><th>店</th><th>地址</th><th>特色</th><th>時間</th></tr></thead>
+<tbody>
+<tr>
+<td><strong>Shakespeare and<br>Company Café</strong></td>
+<td>37 rue de la Bûcherie<br>75005</td>
+<td>正對聖母院、左岸河邊；由 2015 年起係書店嘅咖啡室；用巴黎本地烘焙豆（Lomi、Cayo），季節性菜單</td>
+<td>每日<br>09:00–19:00</td>
+</tr>
+<tr>
+<td><strong>Télescope Café</strong></td>
+<td>5 rue Villedo<br>75001</td>
+<td>巴黎精品咖啡圈嘅代表店之一；以淺焙單品手沖聞名，風味清晰、層次分明；店細座位少</td>
+<td>週一至五<br>08:30 開<br>週日休</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="card tip">
+<p><strong>💡 咖啡控貼士</strong>：Télescope 喺 1 區（Palais Royal 一帶），離聖母院約 25 分鐘步行 —— 唔順路但值得專程去。近聖母院就揀 Shakespeare and Company，行 3 分鐘過橋就到。</p>
+<p><strong>點咖啡小抄</strong>：<span class="hl">Un café</span> = 濃縮（唔係美式！）｜<span class="hl">Café allongé</span> = 美式｜<span class="hl">Café crème</span> = 拿鐵｜<span class="hl">Noisette</span> = 瑪奇朵</p>
+</div>
+
+<h2 id="practical">🎫 六、實用資訊</h2>
+<div class="tw">
+<table>
+<thead><tr><th>項目</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td>地址</td><td>6 Parvis Notre-Dame – Place Jean-Paul II, 75004</td></tr>
+<tr><td>教堂入場</td><td><strong>免費</strong>；建議喺官網預約免費時段（notredamedeparis.fr，時段 48 小時前開放）。官網明言：門票只可以喺官方網站攞，導遊或旅行社唔可以代售</td></tr>
+<tr><td>開放時間</td><td>週一至五 07:50–19:00（<strong>週四延長至 22:00</strong>）；週六日 08:15–19:30；最後入場 = 關門前 30 分鐘</td></tr>
+<tr><td>塔樓登頂</td><td><strong>€16</strong>（424 級樓梯、冇電梯）；只可喺 tours-notre-dame-de-paris.fr 網上購票，必須預約。歐盟 26 歲以下居民免費</td></tr>
+<tr><td>寶庫 Trésor</td><td>€12（堂內售票）</td></tr>
+<tr><td>考古地穴</td><td>€9（獨立入口，週二至日 10:00–18:00）</td></tr>
+<tr><td>地鐵</td><td>Cité（4 號線）／Saint-Michel–Notre-Dame（RER B、C）</td></tr>
+<tr><td>巴黎零點</td><td>廣場地面有塊八角石牌「<strong>Point Zéro</strong>」—— 全法國公路里程嘅起點</td></tr>
+</tbody>
+</table>
+</div>
+<div class="card warn">
+<p><strong>⚠️ 特別注意</strong>：2026 年 <strong>9 月 24–26 日</strong>聖母院會例外全面關閉（教宗良十四世 9 月 25 日到訪主持晚禱）。如行程會再到巴黎，請避開呢幾日。</p>
+</div>
+
+<h2 id="secrets">🤫 七、三個秘密</h2>
+<ol class="steps">
+  <li><strong>建築師自畫像</strong><br>尖塔 12 使徒銅像之中，<strong>聖托馬斯</strong>（Saint Thomas，正係建築師嘅主保聖人）係 Viollet-le-Duc 用<strong>自己個樣</strong>雕嘅 —— 佢仲刻意造到望住自己起嘅尖塔。</li>
+  <li><strong>石獸唔係中世紀</strong><br>成日聽人講聖母院有「中世紀石鬼」，其實最有名嗰批奇美拉（Chimera）全部係 <strong>19 世紀</strong>先加上去嘅裝飾，出自 Viollet-le-Duc 嘅修復工程。</li>
+  <li><strong>差啲被拆平</strong><br>大革命期間聖母院淪為倉庫、殘破不堪，有人提議索性拆掉。救返佢嘅係 1804 年拿破崙加冕，同 1831 年雨果本小說引起嘅全民關注。</li>
+</ol>
+
+<h2 id="refs">📚 資料來源</h2>
+<ul>
+  <li>巴黎聖母院官方網站 — <a href="https://www.notredamedeparis.fr/en">notredamedeparis.fr</a>（開放時間、免費預約）</li>
+  <li>聖母院塔樓官方網站 — <a href="https://www.tours-notre-dame-de-paris.fr/en">tours-notre-dame-de-paris.fr</a>（票價、424 級樓梯、導覽路線）</li>
+  <li>巴黎旅遊局 — <a href="https://parisjetaime.com/eng/culture/tours-de-notre-dame-de-paris-p3540">parisjetaime.com</a>（塔樓資訊、教宗到訪關閉安排）</li>
+  <li>法國旅遊發展署 — <a href="https://www.france.fr/zh-Hans/article/%E5%B7%B4%E9%BB%8E%E5%9C%A3%E6%AF%8D%E9%99%A2%E7%9A%846%E4%B8%AA%E7%A7%98%E5%AF%86">france.fr</a>（國王廊斷頭、聖托馬斯自畫像）</li>
+  <li>Shakespeare and Company Café 官方網站 — <a href="https://www.shakespeareandcompany.com/cafe">shakespeareandcompany.com</a>（地址、營業時間）</li>
+  <li>中文維基百科「巴黎聖母院」條目（建築尺寸、玫瑰窗直徑、塔樓年份）</li>
+</ul>
+
+<div class="foot">
+<p>本指南由 <strong>無虛（mo mo）</strong> 整理｜2026年09月10日</p>
+<p>建築尺寸、開放時間、票價均取自上述官方來源；如官方臨時調整，以現場公告為準。</p>
+<p>由 無虛 (mo mo) 生成 — 分享版本</p>
+</div>
+
+</div>
+</body>
+</html>
