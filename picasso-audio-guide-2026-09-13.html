@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>畢加索美術館導賞音頻（粵語）· 2026-09-13</title>
+<style>
+  html { font-size: 32px; }
+  @media (max-width: 600px) { html { font-size: 26px; } }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Noto Sans TC","PingFang HK","Microsoft JhengHei",system-ui,sans-serif;
+    font-size: 1rem; line-height: 1.9; color: #1a1a16; background: #f0e8d8;
+    padding: 0.8rem 0.6rem 4.6rem; -webkit-text-size-adjust: 100%; }
+  .wrap { max-width: 900px; margin: 0 auto; }
+  .hero { background: linear-gradient(135deg,#2a2a22,#3d4a35); color: #f5efe0;
+    border-radius: 20px; padding: 1rem 0.9rem; margin-bottom: 0.9rem; }
+  .hero .k { font-size: 0.6rem; letter-spacing: 0.18em; color: #9fbf90; }
+  .hero h1 { font-family: Georgia,serif; font-size: 1.15rem; color: #fff; margin: 0.3rem 0; }
+  .hero .s { font-size: 0.62rem; color: #ded6c6; }
+  .hero a { color: #cfe3c2; }
+  .card { background: #faf6ee; border: 2px solid #ddd2be; border-radius: 18px;
+    padding: 0.75rem 0.7rem; margin-bottom: 0.7rem; }
+  .ttl { font-family: Georgia,serif; font-size: 0.9rem; color: #2f4a2f; margin-bottom: 0.5rem; }
+  .row { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+  button.play { flex: 1 1 45%; min-height: 2.8rem; font-size: 0.8rem; cursor: pointer;
+    background: #4a7a4a; color: #fff; border: none; border-radius: 12px; padding: 0.45rem 0.5rem; }
+  button.play.alt { background: #7a5c3a; }
+  button.play.on { background: #c96442; }
+  button.play:active { transform: scale(0.98); }
+  .dl { margin-top: 0.35rem; font-size: 0.6rem; }
+  .dl a { color: #6b6455; text-decoration: none; margin-right: 0.8rem; }
+  .stop { position: fixed; left: 0; right: 0; bottom: calc(env(safe-area-inset-bottom, 0px) + 0.6rem);
+    display: flex; justify-content: center; z-index: 9; }
+  .stop button { background: #c96442; color: #fff; border: none; border-radius: 999px;
+    padding: 0.6rem 1.6rem; font-size: 0.78rem; box-shadow: 0 4px 14px rgba(0,0,0,.25); }
+  .note { font-size: 0.62rem; color: #6b6455; margin-top: 0.9rem; }
+  .note a { color: #4a7a4a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hero">
+    <div class="k">MUSÉE NATIONAL PICASSO-PARIS · 粵語語音導賞</div>
+    <h1>畢加索美術館導賞音頻（14 節・男女聲）</h1>
+    <div class="s">2026-09-13 · 巴黎 Hôtel Salé｜每節 1 分鐘左右，行到邊聽到邊｜<a href="picasso-guide-2026-09-13-private.html">← 睇文字導賞卡（15 節）</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">① 走進 Hôtel Salé —— 鹽稅暴發戶嘅豪宅（1656–1659）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/00-intro-hotelsale-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/00-intro-hotelsale-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/00-intro-hotelsale-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/00-intro-hotelsale-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">② 榮譽樓梯 —— 全屋嘅「傑作」</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/01-escalier-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/01-escalier-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/01-escalier-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/01-escalier-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">③《園中裸女》Nu dans un jardin（MP148・1934）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/02-nu-jardin-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/02-nu-jardin-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/02-nu-jardin-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/02-nu-jardin-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">④《畫家同調色板、畫架》（MP104・1928）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/03-peintre-palette-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/03-peintre-palette-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/03-peintre-palette-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/03-peintre-palette-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑤《樹》L'Arbre（MP21・1907）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/04-arbre-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/04-arbre-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/04-arbre-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/04-arbre-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑥《彈吉他嘅男人》MP34 ＋《彈曼陀鈴嘅男人》MP35（1911）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/05-guitare-mandoline-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/05-guitare-mandoline-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/05-guitare-mandoline-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/05-guitare-mandoline-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑦《扮 Pierrot 嘅 Paul》MP84 ＋《倚壁爐嘅男人》MP54</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/06-paul-cheminée-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/06-paul-cheminée-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/06-paul-cheminée-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/06-paul-cheminée-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑧《情侶》Les Amoureux（MP62・1919）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/07-amoureux-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/07-amoureux-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/07-amoureux-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/07-amoureux-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑨《潘笛》La Flûte de Pan（MP79・1923）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/08-flute-de-pan-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/08-flute-de-pan-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/08-flute-de-pan-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/08-flute-de-pan-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑩《噴泉旁三個女人》（MP74・1921）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/09-trois-femmes-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/09-trois-femmes-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/09-trois-femmes-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/09-trois-femmes-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑪《女泳手》La Nageuse（MP119・1929）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/10-nageuse-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/10-nageuse-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/10-nageuse-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/10-nageuse-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑫《戴草帽、拎雪糕筒嘅男人》（MP174・1938）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/11-chapeau-paille-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/11-chapeau-paille-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/11-chapeau-paille-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/11-chapeau-paille-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑬⑭《白底裸女》MP102 ＋《人物》MP101（1927）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/12-nu-fond-blanc-figure-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/12-nu-fond-blanc-figure-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/12-nu-fond-blanc-figure-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/12-nu-fond-blanc-figure-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="card">
+    <div class="ttl">⑮《海濱人物》Figures au bord de la mer（MP131・1931）</div>
+    <div class="row">
+      <button class="play" onclick="play('audio/13-figures-bord-de-mer-f.mp3',this)">▶ 女聲</button>
+      <button class="play alt" onclick="play('audio/13-figures-bord-de-mer-m.mp3',this)">▶ 男聲</button>
+    </div>
+    <div class="dl"><a href="audio/13-figures-bord-de-mer-f.mp3" download>⬇️ 女聲 MP3</a><a href="audio/13-figures-bord-de-mer-m.mp3" download>⬇️ 男聲 MP3</a></div>
+  </div>
+  <div class="stop"><button onclick="stopAll()">⏸ 停低</button></div>
+  <div class="note">＊按「▶ 女聲／▶ 男聲」即時播放；亦可按下面連結下載 MP3 離線聽（機場／無網絡都用得）。同一時間只會播一段，按另一個會自動停上一段。<br>＊內容：現場展牌逐字抄錄 ＋ 館方 CEP 館藏記錄交叉核對；由 無虛 (mo mo) 生成。</div>
+</div>
+<script>
+var cur = null;
+function play(src, btn) {
+  stopAll();
+  cur = new Audio(src);
+  cur.play();
+  btn.classList.add('on');
+  cur.onended = function () { btn.classList.remove('on'); };
+  cur._btn = btn;
+}
+function stopAll() {
+  if (cur) { try { cur.pause(); } catch (e) {} if (cur._btn) cur._btn.classList.remove('on'); cur = null; }
+}
+</script>
+</body>
+</html>
