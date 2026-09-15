@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Charente-Maritime 化石地點 × 博物館指南（Talmont 為中心）</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css">
+<style>
+html { font-size: 32px; }
+@media (max-width: 600px) { html { font-size: 26px; } }
+* { box-sizing: border-box; }
+body { font-family: "Segoe UI", "PingFang HK", "Microsoft JhengHei", sans-serif;
+       background: #f0e8d8; color: #1a1a16; margin: 0; padding: 1rem 0.8rem; line-height: 2.0; }
+.wrap { max-width: 1100px; margin: 0 auto; }
+h1 { font-family: Georgia, serif; font-size: 1.15rem; color: #2a5c2a; line-height: 1.6; }
+h2 { font-family: Georgia, serif; font-size: 0.85rem; color: #c96442; margin: 1.6rem 0 0.4rem;
+     border-bottom: 3px solid #d8d0c0; padding-bottom: 0.2rem; }
+h3 { font-family: Georgia, serif; font-size: 0.7rem; color: #2a5c2a; margin: 1rem 0 0.3rem; }
+.sub { color: #4a4840; font-size: 0.55rem; }
+.badge { display: inline-block; background: #2a5c2a; color: #f5efe0; font-size: 0.45rem;
+         padding: 0.1rem 0.5rem; border-radius: 999px; vertical-align: middle; }
+.badge.share { background: #c96442; }
+.card { background: #f5efe0; border: 1px solid #d8d0c0; border-radius: 14px;
+        padding: 0.6rem 0.8rem; margin: 0.6rem 0; }
+.box { border-radius: 14px; padding: 0.6rem 0.8rem; margin: 0.6rem 0; font-size: 0.62rem; }
+.box.warn { background: #fbeee6; border: 2px solid #c96442; }
+.box.info { background: #eef3e8; border: 2px solid #4a7a4a; }
+.box b { color: #2a5c2a; }
+.scroll { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; min-width: 700px; font-size: 0.55rem;
+        background: #f5efe0; border-radius: 10px; overflow: hidden; }
+th { background: #2a2a22; color: #f5efe0; font-weight: bold; text-align: left;
+     padding: 0.4rem 0.5rem; font-size: 0.5rem; }
+td { border-top: 1px solid #d8d0c0; padding: 0.45rem 0.5rem; vertical-align: top; line-height: 1.75; }
+tr:nth-child(even) td { background: #f7f2e6; }
+.chip { display: inline-block; font-size: 0.42rem; padding: 0.05rem 0.4rem; border-radius: 999px;
+        background: #e3ddcd; color: #4a4840; white-space: nowrap; }
+.chip.ok { background: #dfe9d8; color: #2a5c2a; }
+.chip.warn { background: #f6ded2; color: #96402a; }
+.chip.one { background: #e8e3f0; color: #4a3a6a; }
+.legend { font-size: 0.5rem; color: #4a4840; }
+#map { height: 480px; border-radius: 14px; border: 2px solid #2a5c2a; margin: 0.6rem 0; }
+.leaflet-popup-content { font-size: 18px !important; line-height: 1.7; }
+.leaflet-popup-content-wrapper { border-radius: 12px; }
+.pin { display: inline-block; width: 30px; height: 30px; line-height: 30px; text-align: center;
+       border-radius: 50%; color: #fff; font-weight: bold; font-size: 14px; }
+.pin.f { background: #b4451f; } .pin.m { background: #2a5c2a; }
+ol, ul { padding-left: 1.1rem; font-size: 0.6rem; }
+li { margin-bottom: 0.25rem; }
+.step { background: #f5efe0; border-left: 6px solid #4a7a4a; border-radius: 10px;
+        padding: 0.5rem 0.7rem; margin: 0.5rem 0; font-size: 0.6rem; }
+footer { margin-top: 1.6rem; border-top: 3px solid #d8d0c0; padding-top: 0.6rem;
+         font-size: 0.45rem; color: #4a4840; }
+a { color: #2a5c2a; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>🪨 Charente-Maritime 化石地點 × 博物館指南</h1>
+<div class="sub">以 Talmont-sur-Gironde 為中心 · 法國 Charente-Maritime（17）／Gironde（33）<br>
+2026 年 09 月 15 日 · 查核日期：09 月 15 日 <span class="badge">私人導覽版</span></div>
+
+<div class="box info">
+<b>一句話答案：</b>有 —— Talmont 沿岸整條崖線都是<b>白堊紀晚期坎潘期</b>白堊岩，化石到處可見（單是 Talmont、Meschers、Barzan 的崖就出產海膽、牡蠣層、Orbitoïdes 有孔蟲、苔蘚蟲，甚至鯊魚牙）；而<b>可以入內看化石的博物館有 5 間</b>，最近一間就在 Talmont 村內（舊校舍改建，設古生物學展區）。
+</div>
+
+<div class="box warn">
+<b>⚠️ 三條必須遵守的規矩（2026-09 查核）</b><br>
+1. <b>嚴禁採集化石</b>：Talmont 市長已頒布市政法令（arrêtés municipaux）禁止抽取化石，並限制 Caillaud 部分通道；市政人員會監察、必要時通知憲兵。沿線崖區同時屬 <b>Natura 2000</b> 保護區。<br>
+2. <b>不要爬崖／站在崖腳</b>：崖體受侵蝕、有落石風險（Cerema 曾做 Côte de Beauté 崖體侵蝕研究）。<br>
+3. <b>可以做的</b>：眼看、放大鏡、拍照；在安全位置（崖頂步道、退潮沙灘邊、鹽沼旁）觀察。<br>
+<span class="chip warn">參考：法國 Calvados 正擬設保護區，連沙灘拾化石都可能罰 750 €</span>
+</div>
+
+<h2>🗺️ 位置圖（OSM 真實地形）</h2>
+<div id="map"></div>
+<div class="legend">🔴 圓形＝化石地點　🟢 綠色＝博物館／石窟　（座標由 OpenStreetMap Nominatim 查得，非手繪示意）</div>
+
+<h2>📍 表 A：可以看化石的地點</h2>
+<div class="scroll">
+<table>
+<tr><th>地點</th><th>距 Talmont</th><th>地層（年代）</th><th>主要化石</th><th>狀態</th></tr>
+<tr>
+<td><b>1. Talmont-sur-Gironde</b><br>村岬 + Caillaud 東／西崖</td>
+<td>0 km<br>（步行）</td>
+<td>坎潘期（Charentes 生物帶 CIVb：含海綠石泥灰白堊）＋頂部一層 AVG85 稱「馬斯垂克期」</td>
+<td>不規則海膽 <i>Echinocorys</i>、<i>Micraster</i>、<i>Offaster</i>、<i>Sternotaxis</i>；規則海膽 <i>Temnocidaris</i>、<i>Phymosoma</i>、<i>Lambertechinus</i>、<i>Salenia</i>；雙殼類、腹足類、腕足類、苔蘚蟲、矽化海綿</td>
+<td><span class="chip warn">禁採集</span><span class="chip ok">多源一致</span></td></tr>
+<tr>
+<td><b>2. Meschers-sur-Gironde</b><br>崖 + 石窟群（Matata／Régulus）</td>
+<td>2 km</td>
+<td>上部：坎潘期上部（CVI–CVII）泥灰岩／石灰岩；下部：坎潘期硬石灰岩</td>
+<td>牡蠣 <i>Ostrea (Pycnodonte) vesicularis</i>（局部成 lumachelle 牡蠣層）、有孔蟲 <i>Orbitoides media</i>（肉眼可見白點）、rudistes、珊瑚、苔蘚蟲、海膽；<b>崖層曾出土鯊魚牙</b></td>
+<td><span class="chip warn">禁採集</span><span class="chip ok">多源一致</span></td></tr>
+<tr>
+<td><b>3. Barzan / Chant Dorat</b><br>Le Caillaud・Le Pilou 崖</td>
+<td>5 km</td>
+<td>坎潘期（CIVa 露頭，崖頂見較上層底部）</td>
+<td>與上列同層生物群；<b>Vullo 論文鯊魚牙產地</b>（<i>Squalicorax kaupi</i>、<i>S. pristodontus</i>，標本編號 CLD／PIL）</td>
+<td><span class="chip warn">部分通道管制</span><span class="chip ok">多源一致</span></td></tr>
+<tr>
+<td><b>4. Saint-Georges-de-Didonne</b></td>
+<td>4 km</td>
+<td>坎潘期 IV–V</td>
+<td>與 Meschers 上層相同（牡蠣、Orbitoïdes、rudistes、珊瑚）</td>
+<td><span class="chip warn">禁採集</span><span class="chip one">單源</span></td></tr>
+<tr>
+<td><b>5. Arces-sur-Gironde</b><br>（Port-Marant）</td>
+<td>8 km</td>
+<td>坎潘期 III（生物帶 CV）</td>
+<td>牡蠣、貽貝、扇貝、inocérames、腹足類、腕足類、<b>鸚鵡螺</b>、海膽</td>
+<td><span class="chip warn">禁採集</span><span class="chip one">單源</span></td></tr>
+<tr>
+<td><b>6. Mortagne-sur-Gironde</b><br>死崖（falaises mortes）</td>
+<td>12 km</td>
+<td>坎潘期下–中（C6a／C6b）</td>
+<td>有孔蟲、海綿、苔蘚蟲、腕足類、雙殼類、棘皮動物；<b>標誌化石心形海膽 <i>Echinocorys orbis</i></b>；崖內鑿有 St-Martial 石窟教堂</td>
+<td><span class="chip warn">禁採集</span><span class="chip ok">多源一致</span></td></tr>
+<tr>
+<td><b>7. Saint-Palais-sur-Mer</b><br>「Pont du Diable」</td>
+<td>10 km</td>
+<td>下：馬斯垂克期；上：呂特期（Lutetian，−49～−40 Ma）<b>不整合面</b>（中間缺約 2,000 萬年）</td>
+<td>Lutetian 有孔蟲（alvéolines、<i>Nummulites</i>、operculines、orbitolites）；角礫岩基底</td>
+<td><span class="chip one">地質保護點</span></td></tr>
+<tr>
+<td><b>9. Pointe du Chay</b><br>（Angoulins，La Rochelle 南）</td>
+<td>60 km</td>
+<td>侏羅紀 Kimmeridgian（約 −155 Ma）</td>
+<td>珊瑚（<i>Calamophylliopsis</i>）、雙殼 <i>Trichites saussurei</i>、海膽</td>
+<td><span class="chip one">保護點</span></td></tr>
+<tr>
+<td><b>10. Île Madame</b>／<b>11. Fouras</b>／Île d'Aix／Oléron（plage des Chaucres）</td>
+<td>30–60 km</td>
+<td>森諾曼期（Cenomanian，−100～−94 Ma）</td>
+<td>菊石、rudistes、牡蠣、海膽、腹足類、腕足類；Fouras 有微脊椎動物（鱷、淡水鯊、恐龍牙）</td>
+<td><span class="chip ok">多源一致</span></td></tr>
+<tr>
+<td><b>13. Cadeuil 沙坑</b>（Saint-Sornin）</td>
+<td>15 km</td>
+<td>森諾曼期</td>
+<td>沙層化石群（私人沙坑，需事先安排）</td>
+<td><span class="chip one">單源</span></td></tr>
+<tr>
+<td><b>14. Angeac-Charente</b>（近 Cognac）</td>
+<td>約 100 km</td>
+<td>白堊紀早期（約 −140 Ma，比 Talmont 早 6,000 萬年）</td>
+<td>蜥腳類、禽龍類、似鳥龍類等恐龍，另龜、鱷、植物化石；夏季有考古現場導賞（須預約）</td>
+<td><span class="chip ok">多源一致</span></td></tr>
+</table>
+</div>
+<div class="legend">註：第 8 項（Royan 一帶崖線）已併入第 4／7 項；內陸 Charente（Cognac、Aubeterre-sur-Dronne、Jarnac）為坎潘期命名地（1857 年 Henri Coquand），屬標準剖面研究區，非旅遊採集點。</div>
+
+<h2>🏛️ 表 B：有化石／地質內容的博物館</h2>
+<div class="scroll">
+<table>
+<tr><th>博物館</th><th>位置／距離</th><th>化石・地質重點</th><th>開放時間（2026）</th><th>門票</th></tr>
+<tr>
+<td><b>Musée d'Histoire Locale et de la Pêche dans l'Estuaire</b><br>（Talmont 村博物館）</td>
+<td>Rue des Écoles, 17120 Talmont<br>0 km · 舊校舍<br>電話 05 46 90 43 87</td>
+<td><b>設古生物學（paléontologie）展區，展出本地化石</b>，另有教堂與古城史、河口漁業技術；庭院陳列傳統漁船 yole</td>
+<td>2026/04/04 – 09/27<br>每日 10:00–12:00、14:00–17:30</td>
+<td><span class="chip one">未見公佈，現場問</span></td></tr>
+<tr>
+<td><b>Écomusée des Grottes de Matata</b></td>
+<td>67 bd de la Falaise, 17132 Meschers<br>2 km</td>
+<td>石窟＋<b>地質解說</b>（坎潘／馬斯垂克石灰岩、崖層化石）、穴居生活復原；語音導賞已含在票價</td>
+<td>2026/03/28–09/30 每日 10:00–19:00<br>10/01–11/01 10:00–12:00、14:00–18:00</td>
+<td>成人 7 €<br>兒童 5.30 €（&lt;5 歲免費）</td></tr>
+<tr>
+<td><b>Grottes du Régulus</b></td>
+<td>bd de la Falaise, Meschers<br>2 km</td>
+<td>導賞主題包含<b>地質</b>、河口、漁業、穴居歷史；洞穴開鑿於石灰岩崖內</td>
+<td>2026/04/04–11/11 每日<br>售票 10:00–12:30、13:30–17:30（9 月）</td>
+<td>成人 8.70 €<br>兒童 6.10 €</td></tr>
+<tr>
+<td><b>Muséum d'Histoire Naturelle de La Rochelle</b><br>（Musée de France）</td>
+<td>28 rue Albert 1er, 17000 La Rochelle<br>60 km</td>
+<td><b>地庫拱頂展廳＝古生物收藏</b>，以本地標本為主：上侏羅紀菊石、Kimmeridgian 海生脊椎動物；館藏亦有「Campanien Royan」標本</td>
+<td>高季（06/15–09/15）：週二至五＋週日 10:00–18:00、週六 14:00–18:00（週一休）<br>低季（09/15–06/15）：週二至五 10:00–12:30、13:30–17:30；週六 13:30–17:30；週日 10:00–12:30、13:30–17:30</td>
+<td><span class="chip warn">門票有分歧</span> 成人 4 €（Ouest-Paléo）／8 €（旅遊局）；18 歲以下免費 → 以官網為準</td></tr>
+<tr>
+<td><b>Musée de Royan</b></td>
+<td>31 avenue de Paris, 17200 Royan<br>15 km</td>
+<td>前身為 1885 年市立博物館，<b>收藏含化石</b>（另有動物標本、考古遺物）；常設展覽：Royan 由史前到 1980 年代</td>
+<td>07–08 月：週二至日 09:30–12:30、14:30–18:30<br>09–06 月：週三至五 14:00–18:00</td>
+<td>成人 4.20 €<br>優惠 2.50 €（&lt;18 歲免費）</td></tr>
+<tr>
+<td><b>Musée d'Angoulême</b><br>（恐龍館藏）</td>
+<td>Angoulême<br>約 100 km</td>
+<td>收藏 Angeac-Charente 出土恐龍化石約 <b>15 萬件</b>；展覽「Chercheurs de dinos…」2026/05/22 – 2027/01/03</td>
+<td><span class="chip one">時間待查</span>（官網／電話）</td>
+<td><span class="chip one">待查</span></td></tr>
+</table>
+</div>
+<div class="box info">💡 <b>順路情報：</b>同一「Angeac 恐龍」展覽由 Musée d'Angoulême 設計，亦在<b>巴黎植物園大畫廊（MNHN）</b>展出，若行程經巴黎可以順道看。</div>
+
+<h2>🚶 三條實戰路線</h2>
+<div class="step"><b>① 半日（3–4 小時 · 全程可步行／單車）</b><br>
+10:00 Talmont 村博物館（開門即入，看古生物展區）→ 10:45 沿城牆步道到教堂岬，崖頂觀察白堊層與牡蠣化石痕跡 → 11:30 轉去村東 Caillaud 崖腳（<b>只能在崖頂步道／安全位置看，不要下攀</b>）→ 12:00 午餐 → 13:30 開車 5 分鐘去 Meschers，走 bd de la Falaise 崖頂步道，看 Orbitoïdes 白點與牡蠣層 → 14:30 入 Écomusée Matata（45 分鐘）。</div>
+<div class="step"><b>② 一日（加兩個點）</b><br>
+早上：Talmont＋Meschers（如上）；下午：Barzan / Chant Dorat 崖（堤道邊觀察，沿河口鹽沼）→ 再南 Mortagne 死崖＋St-Martial 石窟教堂 → 回程可在 Saint-Palais-sur-Mer「Pont du Diable」看馬斯垂克／呂特期不整合面（地質課本級景點）。</div>
+<div class="step"><b>③ 雨天／室內日</b><br>
+Muséum d'Histoire Naturelle de La Rochelle（地庫古生物廳，2 小時）→ 市內午餐 → Musée de Royan（化石收藏＋城市史）。兩館相距 60 km，建議同一日排。</div>
+
+<h2>🔍 化石辨認卡（現場最易認的四樣）</h2>
+<ol>
+<li><b>Orbitoïdes（有孔蟲）</b>：白色小圓盤／透鏡狀，直徑幾毫米，密集嵌在石灰岩表面——Meschers 崖上層最典型，用放大鏡看得一清二楚。</li>
+<li><b>牡蠣層（lumachelle）</b>：整層厚殼堆疊，殼形似現代蠔（<i>Pycnodonte vesicularis</i>）；Talmont／Meschers／Barzan 崖都有。</li>
+<li><b>海膽</b>：心形或不規則五瓣花紋（<i>Echinocorys</i>、<i>Micraster</i>）；完整個體少見，多見壓扁的殼體與刺（Temnocidaris）。</li>
+<li><b>rudistes（厚殼蛤）</b>：圓錐／柱狀厚殼，常見兩隻黏在一起；坎潘期上部地層特別多。</li>
+</ol>
+<div class="legend">鯊魚牙（<i>Squalicorax</i> 等）體積只有毫米至厘米，通常要篩洗沉積物才找到，肉眼在崖面不易發現——這類標本見於 La Rochelle 自然史博物館及研究收藏，不在私人手上。</div>
+
+<h2>🧾 核對狀態（Dependency scan）</h2>
+<div class="scroll">
+<table>
+<tr><th>項目</th><th>各來源說法</th><th>採用值</th></tr>
+<tr><td>Talmont 崖地層</td><td>AVG85（2018 實地指南）：坎潘期白堊質石灰岩＋馬斯垂克期石灰岩；fossilesdescharentes：生物帶 CIVb 標準露頭＝Talmont 活崖；新版 Charentes 劃分將北部阿基坦「馬斯垂克」併入坎潘期 IV–V</td><td>以坎潘期為主，頂部一層沿用 AVG85「馬斯垂克」名稱並註明新舊劃分</td></tr>
+<tr><td>崖高</td><td>村岬周邊約 6 m、活崖約 15 m（AVG85）；Meschers 崖 20–30 m（c-royan）；Persée（1971）：馬斯垂克白堊在河口附近厚約 45 m</td><td>三個數字並列，標明出處，不取單一值</td></tr>
+<tr><td>La Rochelle 博物館成人票</td><td>4 €（Ouest-Paléo 文章）／8 €（Kidiklik、Nous La Rochelle）</td><td><span class="chip warn">⚠️ 未定</span> 以官網為準、現場確認</td></tr>
+<tr><td>Matata 開放時間</td><td>旅遊局：2026/03/28–09/30 每日 10–19；官方 FB 貼文提博物館 09:30–16:30</td><td>採用旅遊局頁面（較新、有票價對照）</td></tr>
+</table>
+</div>
+
+<h2>⚠️ 不要當成一定對的五件事</h2>
+<ul>
+<li>開放時間與票價會隨季節／年度調整，出行前一日再查官網。</li>
+<li>「某層有某化石」是該地層已知生物群，不代表當日一定看得到完整標本。</li>
+<li>崖線侵蝕持續，邊坡與崖腳有危險；雨後更不應接近崖底。</li>
+<li>法律上不許採集、敲擊、帶走化石；發現標本請拍照並聯絡 La Rochelle 自然史博物館或本地地質學會（AVG85／Club Géologique）。</li>
+<li><b>地名校正</b>：本指南按「Talmont-sur-Gironde（法國 Charente-Maritime）」整理；若指紐約曼哈頓下城「Tammany」一帶的崖岸，屬另一地質區（北美東岸），本表不適用。</li>
+</ul>
+
+
+<div class="box info">
+<b>🧭 私人筆記（導賞用 · 只在私人版出現）</b><br>
+1. <b>開口引言</b>：「你腳下這層石頭，是 8,000 萬年前一片熱帶淺海的海底——當時這裡在 40°N 左右，海水溫暖，海床上慢慢堆起一層層白堊。」<br>
+2. <b>最有力的實物證據</b>：帶人去 Meschers 崖頂步道，用 10 倍放大鏡看崖面白色小圓點（Orbitoïdes 有孔蟲）——由肉眼不可見變成「我見到裡面有東西」，効果最好。<br>
+3. <b>三個「唔講唔知」</b>：① Coniacien（Cognac）、Santonien（Saintes）、Campanien（干邑葡萄園區）三個地質期名都源自這一帶；② Talmont 從前是石灰岩小島，海退淤積後才連陸；③ 崖線至今仍在後退，村公所曾為加固崖體做工程。<br>
+4. <b>對話紀錄校正</b>：2026-09-15 查詢時寫「Tammany」，已確認為法國 <b>Talmont-sur-Gironde</b>（Charente-Maritime）；紐約曼哈頓下城 Tammany 屬另一地質區。<br>
+5. <b>退潮時段</b>：出發前查該日 marée basse（coefficient 高於 90 更佳），退潮時崖腳／沙洲最易觀察，但仍不可攀爬或採集。
+</div>
+
+
+<h2>📚 資料來源（查核日期 2026-09-15）</h2>
+<ul>
+<li>AVG85（Association Vendéenne de Géologie）《Sortie sur le littoral charentais de l'estuaire de la Gironde à la Pointe du Chay》, 2018 — 實地指南＋1/50 000 地質圖節錄</li>
+<li>fossilesdescharentes.unblog.fr《06 – Le Campanien en Charente-Maritime》— 生物帶逐層化石表（CIVb 露頭列明 Talmont 的 Caillaud 東／西崖）</li>
+<li>Vullo R.《Les vertébrés du Crétacé supérieur des Charentes》博士論文, Université Rennes 1, 2007（theses.hal.science/tel-00166218）— Meschers／Caillaud／Pilou 鯊魚牙標本</li>
+<li>EarthCache GC8D85X「Meschers-sur-Karst」地質說明（坎潘／馬斯垂克岩性與化石）</li>
+<li>Club Géologique Île-de-France《Sortie oursins en Charente-Maritime 2014》— 河口崖線（Talmont、Meschers）Campanien 化石記述</li>
+<li>Géodiversité.NET 媒體檔：Mortagne-sur-Gironde 死崖（坎潘期白堊、St-Martial 石窟）</li>
+<li>Sud Ouest, 2014-12-27〈Talmont-sur-Gironde : l'extraction de fossiles est interdite〉— 市政法令、禁採集、崖體加固</li>
+<li>Natura 2000 ZPS「Estuaire de la Gironde, marais de la rive Nord」（2007 指定）</li>
+<li>Royan Atlantique 旅遊局：Talmont 村博物館、Grottes de Matata、Grottes du Régulus 頁面（開放時間／票價）</li>
+<li>Muséum d'Histoire Naturelle de La Rochelle 官網（ museum.larochelle.fr ）：開放時間、館址；Ouest-Paléo 網頁：地庫古生物展廳內容</li>
+<li>ville-royan.fr／Musée de Royan 官方頁（收藏、時間、票價）；fr.wikipedia《Musée de Royan》《Musée de l'histoire et de la pêche de Talmont》</li>
+<li>Musée d'Angoulême／Grand Cognac／MNHN Paris：Angeac-Charente 恐龍收藏與展覽</li>
+</ul>
+
+<footer>
+由 無虛（mo mo）生成 · 2026 年 09 月 15 日 · 策劃人：Ming Kwok<br>
+地圖底圖：OpenStreetMap 貢獻者（ODbL）；座標由 Nominatim 查得。本文件為個人旅遊／導賞用資料整理，非官方出版物；化石採集法規以法國現行法例及當地市政公告為準。
+</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+var MARKERS = [{"lat": 45.5350413, "lon": -0.9072627, "label": "1  Talmont 村岬 + Caillaud 崖（化石・禁採集）", "kind": "fossil"}, {"lat": 45.534982, "lon": -0.9086466, "label": "1B Musée de Talmont（化石展區）", "kind": "museum"}, {"lat": 45.558105, "lon": -0.9538537, "label": "2  Meschers 崖（化石・禁採集）", "kind": "fossil"}, {"lat": 45.5550903, "lon": -0.9569747, "label": "2B 石窟 Écomusée Matata", "kind": "museum"}, {"lat": 45.5556854, "lon": -0.9581225, "label": "2C 石窟 Grottes du Régulus（含地質導賞）", "kind": "museum"}, {"lat": 45.5260122, "lon": -0.8549253, "label": "3  Barzan / Chant Dorat 崖（化石）", "kind": "fossil"}, {"lat": 45.6024886, "lon": -0.997949, "label": "4  Saint-Georges-de-Didonne 崖（化石）", "kind": "fossil"}, {"lat": 45.5574057, "lon": -0.8651094, "label": "5  Arces-sur-Gironde（化石）", "kind": "fossil"}, {"lat": 45.4822422, "lon": -0.7875322, "label": "6  Mortagne 死崖（化石）", "kind": "fossil"}, {"lat": 45.6405191, "lon": -1.0984844, "label": "7  Pont du Diable 不整合面（地質）", "kind": "fossil"}, {"lat": 45.6249876, "lon": -1.0442154, "label": "8B Musée de Royan（化石收藏）", "kind": "museum"}, {"lat": 46.1049651, "lon": -1.1093352, "label": "9  Pointe du Chay 侏羅紀珊瑚（化石）", "kind": "fossil"}, {"lat": 45.9570935, "lon": -1.1138135, "label": "10 Île Madame 森諾曼期化石", "kind": "fossil"}, {"lat": 45.9883689, "lon": -1.0935837, "label": "11 Fouras 森諾曼期微脊椎動物", "kind": "fossil"}, {"lat": 46.1648259, "lon": -1.1514742, "label": "12B Muséum d'Histoire Naturelle de La Rochelle", "kind": "museum"}, {"lat": 45.7682593, "lon": -0.9781642, "label": "13 Cadeuil 沙坑（森諾曼期）", "kind": "fossil"}, {"lat": 45.6304527, "lon": -0.0746798, "label": "14 Angeac-Charente 恐龍場（140 Ma）", "kind": "fossil"}, {"lat": 45.6490809, "lon": 0.1520729, "label": "15B Musée d'Angoulême（恐龍藏品）", "kind": "museum"}];
+var map = L.map('map', {scrollWheelZoom: false}).setView([45.60, -0.93], 11);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 18,
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+var bounds = [];
+MARKERS.forEach(function (m, i) {
+  bounds.push([m.lat, m.lon]);
+  var cls = (m.kind === 'fossil') ? 'f' : 'm';
+  var icon = L.divIcon({className: '', html: '<div class="pin ' + cls + '">' + (i + 1) + '</div>',
+                        iconSize: [30, 30], iconAnchor: [15, 15]});
+  L.marker([m.lat, m.lon], {icon: icon}).addTo(map).bindPopup('<b>' + m.label + '</b>');
+});
+if (bounds.length > 1) { map.fitBounds(bounds, {padding: [30, 30]}); }
+var g = L.control.scale({imperial: false}); g.addTo(map);
+</script>
+</body>
+</html>
