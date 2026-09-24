@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>德鐵 / ÖBB 顯示屏符號與乘客權益速查卡</title>
+<style>
+  html { font-size: 32px; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #f0e8d8; color: #1a1a16;
+    font-family: "Noto Sans TC", "PingFang HK", "Microsoft JhengHei", system-ui, sans-serif;
+    line-height: 2.0;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 1.1rem 1rem 3rem; }
+  h1, h2, h3 { font-family: Georgia, "Times New Roman", "Noto Serif TC", serif; font-weight: 500; line-height: 1.5; }
+  h1 { font-size: 1.7rem; margin: 0 0 .3rem; }
+  h2 { font-size: 1.18rem; margin: 2.2rem 0 .7rem; padding-bottom: .35rem; border-bottom: 3px solid #4a7a4a; }
+  h3 { font-size: 1rem; margin: 1.4rem 0 .4rem; color: #2f4a2f; }
+  p, li { font-size: .78rem; }
+  .hero { background: #2a2a22; color: #f3ead6; border-radius: 16px; padding: 1.3rem 1.2rem; box-shadow: 0 0 0 1px #4a7a4a inset; }
+  .hero h1 { color: #f7f1e2; }
+  .hero .sub { font-size: .72rem; color: #cfc7b2; line-height: 1.9; }
+  .badge { display: inline-block; font-size: .58rem; background: #4a7a4a; color: #fff; border-radius: 999px; padding: .12rem .6rem; margin: 0 0 .5rem; letter-spacing: .04em; }
+  .card { background: #f5efe0; border: 1px solid #d8d0c0; border-radius: 14px; padding: 1rem; margin: .9rem 0; box-shadow: 0 0 0 1px rgba(0,0,0,.02); }
+  .box { border-radius: 12px; padding: .8rem .95rem; margin: .9rem 0; font-size: .74rem; }
+  .box.gold { background: #fdf6e3; border: 2px solid #c9a227; }
+  .box.warn { background: #fdeee8; border: 2px solid #c96442; }
+  .box.ok   { background: #eef5ea; border: 2px solid #4a7a4a; }
+  .box b { color: #2a2a22; }
+  table { width: 100%; border-collapse: collapse; font-size: .66rem; background: #f7f2e6; }
+  th, td { border: 1px solid #d8d0c0; padding: .38rem .5rem; text-align: left; vertical-align: top; line-height: 1.65; }
+  th { background: #2a2a22; color: #f3ead6; font-weight: 500; }
+  tbody tr:nth-child(even) { background: #f1e9d7; }
+  .scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  code, .de { font-family: "Consolas", "Courier New", monospace; background: #ece3cf; border-radius: 6px; padding: .04rem .3rem; font-size: .62rem; }
+  .de { background: #e7ddd0; }
+  .chip { display: inline-block; font-size: .55rem; border-radius: 999px; padding: .1rem .5rem; white-space: nowrap; }
+  .c-ok { background: #d9ead3; color: #2f5a2a; border: 1px solid #4a7a4a; }
+  .c-warn { background: #fce8d5; color: #8a4a1f; border: 1px solid #c96442; }
+  .c-bad { background: #f6d5d5; color: #8a1f1f; border: 1px solid #b02a2a; }
+  .c-src { background: #e3e0d4; color: #3a3832; border: 1px solid #b9b2a0; }
+  .row { display: flex; flex-wrap: wrap; gap: .7rem; }
+  .row > div { flex: 1 1 320px; }
+  .big { font-size: 1.05rem; font-family: Georgia, serif; color: #2a2a22; }
+  .xl { font-size: 1.35rem; font-family: Georgia, serif; color: #b02a2a; }
+  ul { padding-left: 1.3rem; margin: .4rem 0; }
+  li { margin: .25rem 0; }
+  .photo { width: 100%; max-width: 620px; border-radius: 12px; border: 1px solid #d8d0c0; display: block; margin: .5rem auto; }
+  .foot { margin-top: 2.2rem; padding-top: .9rem; border-top: 1px solid #d8d0c0; font-size: .62rem; color: #4a4840; }
+  a { color: #2f5a2a; word-break: break-all; }
+  .kv { font-size: .7rem; }
+  .kv b { display: inline-block; min-width: 7.6rem; color: #2a2a22; }
+  @media (max-width: 600px) {
+    html { font-size: 26px; }
+    table { font-size: .7rem; }
+    h1 { font-size: 1.35rem; }
+    h2 { font-size: 1rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="badge">旅行速查卡</span>
+    <h1>德鐵 / ÖBB 顯示屏符號<br>與乘客權益速查卡</h1>
+    <div class="sub">
+      看懂德國、奧地利火車站顯示屏 ｜ 班次取消時你有咩權利 ｜ 索償流程<br>
+      整理日期：2026年09月24日 ｜ 個案：09月24日 Berlin Hbf → Wien Hbf
+    </div>
+  </div>
+
+  
+
+  <h2>一、顯示屏點讀</h2>
+  <div class="card">
+    <table>
+      <thead><tr><th style="width:22%">位置</th><th>代表咩</th></tr></thead>
+      <tbody>
+        <tr><td><b>左欄上排細字</b></td><td>車種代號 + 班次號（例如 <span class="de">ICE 693</span>、<span class="de">RE 3 / 3312</span>）</td></tr>
+        <tr><td><b>左欄大數字</b></td><td>預定開車時間（當地時間，24 小時制）</td></tr>
+        <tr><td><b>× 加時間</b></td><td><b>班次取消</b>（唔係延誤）</td></tr>
+        <tr><td><b>右欄細字</b></td><td>途經站 / 起點（例如 <span class="de">Bl-n Gesundbr. – Bernau – Eberswalde</span>）</td></tr>
+        <tr><td><b>右欄大字</b></td><td>終點站</td></tr>
+        <tr><td><b>白底 / 反白 / 彩色斜紋嗰行</b></td><td>異常班次（取消、改月台、特別通告）—— 正常班次係藍底</td></tr>
+        <tr><td><b>時間後面細框</b></td><td>同一班次嘅另一個時間標示（常見於併結列車；<span class="chip c-warn">現場為準</span>）</td></tr>
+      </tbody>
+    </table>
+    <div class="box ok"><b>記法：</b>藍底＝正常；白／花底＝有嘢改；有 × ＝唔開。</div>
+  </div>
+
+  <h2>二、車種代號表</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th style="width:18%">代號</th><th style="width:30%">全名</th><th>邊間公司 / 特點</th></tr></thead>
+    <tbody>
+      <tr><td><b>ICE</b></td><td>Intercity-Express</td><td>德鐵 DB 高速列車（德國境內主力，部分班次去奧地利、瑞士、荷蘭）</td></tr>
+      <tr><td><b>IC / EC</b></td><td>Intercity / Eurocity</td><td>德鐵長途（EC＝跨國）</td></tr>
+      <tr><td><b>RJ</b></td><td>Railjet</td><td>奧地利 ÖBB 高速列車，最高 230 km/h；跨國線會同 ČD（捷克）ComfortJet 車廂混編</td></tr>
+      <tr><td><b>RJX</b></td><td>Railjet Express</td><td>ÖBB 停站更少嘅直達版本</td></tr>
+      <tr><td><b>EN / NJ</b></td><td>EuroNight / Nightjet</td><td>夜車（有臥鋪、躺椅）—— 取消嘅日車冇得搭時，夜車通常係最快替代</td></tr>
+      <tr><td><b>RE / RB</b></td><td>Regional-Express / Regionalbahn</td><td>區域車（慢車、用當地票）</td></tr>
+      <tr><td><b>S</b></td><td>S-Bahn</td><td>城市快鐵（例如 <span class="de">S S7</span> 係柏林市內線）</td></tr>
+      <tr><td><b>FEX</b></td><td>Flughafen-Express</td><td>柏林機場快線（去 Flughafen BER）</td></tr>
+      <tr><td><b>FLX</b></td><td>Flixtrain</td><td>私人營運長途車（票務同 DB 分開，唔可以互用）</td></tr>
+      <tr><td><b>U / Tram / Bus</b></td><td>U-Bahn / Straßenbahn / Bus</td><td>市內交通（要另外買市區票）</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>三、異常用語對照（見到就即刻處理）</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th style="width:34%">德文</th><th style="width:22%">意思</th><th>你要做咩</th></tr></thead>
+    <tbody>
+      <tr><td><span class="de">Fahrt fällt aus</span></td><td><b>班次取消</b></td><td>唔好等。去 Service Point / DB Reisezentrum 或開 app 睇替代班次</td></tr>
+      <tr><td><span class="de">Zug fällt aus</span> / <span class="de">Halt entfällt</span></td><td>列車取消 / 本站唔停</td><td>同上；「Halt entfällt」＝車照行但唔停你呢個站</td></tr>
+      <tr><td><span class="de">Verspätung</span> / <span class="de">+20</span></td><td>延誤 / 遲 20 分鐘</td><td>留意接駁班次夠唔夠時間；國際線遲 ≥60 分鐘可索償</td></tr>
+      <tr><td><span class="de">Gleis</span> / <span class="de">Bahnsteig</span></td><td>月台 / 月台</td><td>開車前 5–10 分鐘先出月台係常態，企喺顯示屏附近等</td></tr>
+      <tr><td><span class="de">Abfahrt</span> / <span class="de">Ankunft</span></td><td>開車 / 到達</td><td>睇清楚你嗰欄係出發定到達</td></tr>
+      <tr><td><span class="de">Umstieg</span> / <span class="de">Umsteigen</span></td><td>轉車</td><td>轉車站細（同月台對面）通常 5–10 分鐘夠</td></tr>
+      <tr><td><span class="de">Ersatzverkehr</span> / <span class="de">SEV</span></td><td>替代交通 / 路軌替代巴士</td><td>通常喺車站外指定巴士站，跟指示牌行</td></tr>
+      <tr><td><span class="de">Bauarbeiten</span></td><td>工程</td><td>時間表會改，改期／改月台好常見</td></tr>
+      <tr><td><span class="de">Zugbindung aufgehoben</span></td><td><b>班次綁定解除</b></td><td>好消息：你張票可以搭其他班次（見第四節）</td></tr>
+      <tr><td><span class="de">technische Störung am Zug</span></td><td>列車技術故障</td><td>通常唔會即刻修好 → 直接搵替代</td></tr>
+      <tr><td><span class="de">Verspätung eines vorausfahrenden Zuges</span></td><td>前方列車延誤</td><td>連鎖延誤，接駁有風險</td></tr>
+      <tr><td><span class="de">Defekt an der Strecke</span> / <span class="de">Beschädigung einer Brücke</span></td><td>路線故障 / 橋樑損毀</td><td>影響範圍大，通常全線；改用其他路線</td></tr>
+      <tr><td><span class="de">Verfügbarkeit der Gleise derzeit eingeschränkt</span></td><td>路軌暫時受限</td><td>月台可能臨時改，企喺顯示屏前等最新資訊</td></tr>
+      <tr><td><span class="de">Hohe Auslastung</span></td><td>高載客量</td><td>車好滿；有訂座就一定要坐自己位</td></tr>
+      <tr><td><span class="de">Heute ohne fahrzeuggebundene Einstiegshilfe</span></td><td>今日無輪椅升降設備</td><td>輪椅／大型行李要搵職員幫手</td></tr>
+      <tr><td><span class="de">Kein gastronomisches Angebot</span></td><td>車上無餐飲</td><td>上車前買定水同食物</td></tr>
+      <tr><td><span class="de">außerplanmäßiger Halt</span></td><td>臨時加停</td><td>唔影響你，除非你原本唔想停</td></tr>
+      <tr><td><span class="de">Bestätigung</span></td><td>延誤／取消證明</td><td>索償證據，車站或車上問職員攞</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>四、班次取消 / 大延誤：你嘅權利</h2>
+
+  <div class="row">
+    <div class="card">
+      <h3>🇦🇹 ÖBB（奧地利國鐵）官方條款</h3>
+      <p>如果班次取消，或者遲 <b>超過 60 分鐘</b>，你可以揀：</p>
+      <ul>
+        <li><b>唔搭，全額退票</b>（出發前放棄行程）</li>
+        <li><b>免費搭下一班</b>，可以改路線、改時間</li>
+        <li><b>中途放棄</b>，退未搭嗰段車費</li>
+        <li><b>行程已無意義</b>：用其他班次即刻返起點，全額退票</li>
+        <li><b>100 分鐘內冇人話你知點轉車</b> → 可以自己買其他公共交通（火車或巴士）嘅票繼續行程，<b>合理費用可索償</b></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🇩🇪 DB（德鐵）官方條款</h3>
+      <p>符合以下情況 → <b>Zugbindung aufgehoben</b>（班次綁定解除）：</p>
+      <ul>
+        <li>班次取消、停站取消</li>
+        <li>預計到達遲 <b>≥20 分鐘（國內）</b> / <b>≥60 分鐘（國際）</b></li>
+        <li>趕唔到接駁班次、班次提早開</li>
+      </ul>
+      <p>解除之後：可以搭<b>任何 DB 長途車（ICE / IC / EC）同區域車</b>，可以改路線，亦可以揀<b>較後班次</b>（同日、翌日、甚至 3 星期後；<b>原定出發日起一年內</b>有效）；長途仲可以搭同日<b>較早</b>班次。</p>
+    </div>
+  </div>
+
+  <div class="box gold">
+    <b>💰 賠償（歐盟 1371/2007 規則，DB 同 ÖBB 一樣）</b><br>
+    遲 <b>60–119 分鐘</b> → 退 <b>25%</b> 票價 ｜ 遲 <b>≥120 分鐘</b> → 退 <b>50%</b> 票價<br>
+    班次取消而你唔搭 → 可以要求<b>全額退款</b>（同賠償二擇其一，唔可以兩樣都要）。
+  </div>
+
+  <div class="card">
+    <h3>🧾 索償 4 步</h3>
+    <ul>
+      <li><b>1. 攞證明</b>：喺車站 Service Point / Reisezentrum 或車上職員攞 <span class="de">Bestätigung</span>（延誤／取消證明）</li>
+      <li><b>2. 留單據</b>：車票、座位預訂（取消行程嘅座位預訂可以免費退）、額外交通收據</li>
+      <li><b>3. 交表</b>：DB 用 bahn.de 嘅 <span class="de">Fahrgastrechte</span> 表格；ÖBB 用 oebb.at 嘅 Fahrgastrechte / 客服</li>
+      <li><b>4. 等回覆</b>：保留副本；跨國票通常由賣票嗰間公司處理</li>
+    </ul>
+  </div>
+
+  <h2>五、實例：09月24日 RJ 177（Berlin Hbf 15:28 → Wien Hbf）</h2>
+  <div class="card">
+    <div class="kv">
+      <b>顯示屏寫：</b><span class="xl">×</span> RJ 177 ｜ 15:28 ｜ Wien Hbf ｜ <span class="de">Fahrt fällt aus</span>
+    </div>
+    <p></p>
+    <table>
+      <thead><tr><th style="width:30%">項目</th><th>官方數據核實結果</th></tr></thead>
+      <tbody>
+        <tr><td>狀態</td><td><span class="chip c-bad">已取消</span>（<span class="de">isCancelled = 1</span>），原定 15:28 由 2 號月台開</td></tr>
+        <tr><td>原因</td><td><span class="de">Technische Störung am Zug</span>（列車技術故障），德鐵實時數據於<b>當日 13:06</b> 發布</td></tr>
+        <tr><td>影響範圍</td><td><b>全線取消</b>：Hamburg-Altona → Hamburg Hbf → Berlin-Spandau → Berlin Hbf → Dresden → Praha → Brno → Břeclav → Wien Hbf</td></tr>
+        <tr><td>車型</td><td>Railjet 177「Berliner」，柏林–布拉格–維也納走廊（ÖBB 車，部分班次用 ČD ComfortJet 車廂）</td></tr>
+      </tbody>
+    </table>
+
+    <h3>🔁 當晚仲有咩方法去維也納（ÖBB 官方查詢，09月24日 15:40 起）</h3>
+    <div class="scroll">
+    <table>
+      <thead><tr><th>出發</th><th>到達</th><th style="width:12%">車程</th><th style="width:10%">轉車</th><th>班次</th></tr></thead>
+      <tbody>
+        <tr><td>09月24日 15:36</td><td>09月25日 <b>00:35</b></td><td>8h59</td><td>2</td><td>最快：ICE 1601（15:36 Berlin Hbf → München，4 號月台）→ NJ 295（夜車，經 Freilassing 續行 Salzburg）→ Wien Hbf</td></tr>
+        <tr><td>09月24日 20:13</td><td>09月25日 <b>07:00</b></td><td>10h47</td><td><b>0</b></td><td><b>NJ 457</b>（Nightjet 夜車，直達；官方註明 Břeclav 後以同一班次繼續）⭐ <b>最舒服</b></td></tr>
+        <tr><td>09月24日 17:28</td><td>09月25日 05:25</td><td>11h57</td><td>2</td><td>RJ 385（先到 Praha hl.n.）→ 轉 IC 407 → Wien Hbf</td></tr>
+        <tr><td>09月24日 18:37</td><td>09月25日 06:32</td><td>11h55</td><td>2</td><td>EN 50237（經 Freilassing，同一班次續行到 Wien Hbf）</td></tr>
+        <tr><td>09月24日 20:13</td><td>09月25日 05:25</td><td>9h12</td><td>1</td><td>夜車組合（多過一個票價艙等，系統顯示同一行程 ×5 行）</td></tr>
+        <tr><td>09月24日 20:37</td><td>09月25日 09:48</td><td>13h11</td><td>1</td><td>NJ 40421（經 Freilassing 續行到 Wien Hbf）</td></tr>
+        <tr><td>09月24日 21:27</td><td>09月25日 07:38</td><td>10h11</td><td>3</td><td>夜車組合（到達站標示 Wien Hbf (U1)）</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="box ok">
+      <b>交叉核對：</b>Berlin Hbf 現場板顯示 17:28 有 <b>RJ 385 → Praha hl.n.</b>（2 號月台，+10 分鐘），同 ÖBB 查詢嘅第一個替代方案一致 → 兩邊資料互證。
+    </div>
+    <div class="box warn">
+      <b>⚠️ 維也納側特別通告：</b>ÖBB 公告 2026年09月07日 – 2027年10月底，<b>Wien Hbf ↔ Wien St.Marx / Praterstern 之間冇車</b>（工程）。要用 Wiener Linien（U1 或經 Wien Meidling / Wien Stadlau / Wien Floridsdorf / Wien Simmering 轉市內交通）。繁忙時間 U1 會好迫。
+    </div>
+  </div>
+
+  <h2>六、核對狀態（資料來源掃描）</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th style="width:26%">項目</th><th style="width:26%">來源 1</th><th style="width:26%">來源 2</th><th>採用值</th></tr></thead>
+    <tbody>
+      <tr><td>RJ 177 取消</td><td>現場顯示屏相片（Fahrt fällt aus）</td><td>德鐵實時數據（isCancelled = 1）</td><td><span class="chip c-ok">✅ 兩源一致</span></td></tr>
+      <tr><td>取消原因：列車技術故障</td><td>德鐵實時訊息 <span class="de">Technische Störung am Zug</span>，13:06 發布</td><td>—</td><td><span class="chip c-src">🏷 單源（DB 官方實時）</span></td></tr>
+      <tr><td>替代班次（NJ 457 等）</td><td>ÖBB Scotty 官方查詢（09月24日 15:40）</td><td>現場板 RJ 385 17:28 → Praha 互相印證</td><td><span class="chip c-ok">✅ 部分互證</span></td></tr>
+      <tr><td>RJ 385 月台 2、遲 10 分鐘</td><td>Berlin Hbf 實時顯示板</td><td>—</td><td><span class="chip c-src">🏷 單源（實時板）</span></td></tr>
+      <tr><td>ÖBB 乘客權利（4 個選項 + 100 分鐘規則）</td><td>oebb.at 官方「Zugausfall oder Verspätung」</td><td>—</td><td><span class="chip c-ok">✅ 官方原文</span></td></tr>
+      <tr><td>DB Zugbindung aufgehoben 條件</td><td>bahn.de 官方 FAQ</td><td>—</td><td><span class="chip c-ok">✅ 官方原文</span></td></tr>
+      <tr><td>賠償 25% / 50%（60 / 120 分鐘）</td><td>歐盟 1371/2007 規則（DB、ÖBB 同標準）</td><td>多個第三方鐵路權益頁一致</td><td><span class="chip c-ok">✅ 多源一致</span></td></tr>
+      <tr><td>維也納 Hbf ↔ Praterstern 停駛</td><td>ÖBB 查詢頁公告（09月07日 – 2027年10月底）</td><td>—</td><td><span class="chip c-warn">⚠️ 長期工程，出發前再確認</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="box warn">
+    <b>⚠️ 唔可以當一定啱嘅 3 樣：</b>
+    <ul style="margin:.3rem 0">
+      <li><b>班次時間／月台會實時變</b> —— 呢張卡係 09月24日嘅查詢結果，唔係長期時間表。上車前一定要用 <b>DB Navigator</b> 或 <b>ÖBB Scotty</b> app 再查一次。</li>
+      <li><b>月台以現場顯示屏為準</b>，app 同顯示屏唔同時，跟顯示屏（app 更新有時落後）。</li>
+      <li><b>私人營運（FLX）同 DB／ÖBB 票唔互通</b>，權益亦唔一樣。</li>
+    </ul>
+  </div>
+
+  <h2>七、資料來源</h2>
+  <div class="card" style="font-size:.68rem">
+    <ul>
+      <li>德鐵實時離站數據（Berlin Hbf，09月24日，含 RJ 177 取消紀錄）：<span class="de">dbf.finalrewind.org/Berlin Hbf.json?detailed=true</span></li>
+      <li>ÖBB 官方查詢（Scotty / fahrplan.oebb.at）班次搜尋：Berlin Hbf → Wien Hbf，09月24日 15:40</li>
+      <li>ÖBB「Zugausfall oder Verspätung」（乘客權利）：oebb.at → Reiseplanung &amp; Services → Fahrgastrechte</li>
+      <li>DB「In welchen Fällen ist die Zugbindung aufgehoben」：bahn.de → FAQ</li>
+      <li>歐盟鐵路乘客權利規則：Regulation (EC) No 1371/2007（60 分鐘 = 25%、120 分鐘 = 50%）</li>
+      <li>查核日期：2026年09月24日</li>
+    </ul>
+    <p style="font-size:.62rem;color:#4a4840;margin-top:.4rem">
+      本卡為旅行參考整理，並非鐵路公司官方文件；票務、退款、賠償一律以 DB / ÖBB 官方條款及現場職員指示為準。
+    </p>
+  </div>
+
+  <div class="foot">
+    由 無虛 (mo mo) 生成 ｜ 2026年09月24日 ｜ 分享版 ｜ 由 無虛 (mo mo) 生成
+  </div>
+
+</div>
+</body>
+</html>
