@@ -26,8 +26,9 @@ h3 .en { font-size: .82rem; color: #5a5446; font-weight: 400; font-family: Georg
 table { border-collapse: collapse; width: 100%; font-size: .88rem; }
 table.kv th { text-align: left; vertical-align: top; white-space: nowrap; width: 8.5rem;
         padding: .55rem .7rem; background: #eee4d0; border: 1px solid #d8ccb4; color: #3a3830; }
-table.kv td { padding: .55rem .7rem; border: 1px solid #d8ccb4; vertical-align: top; }
-table.wide th { width: 11rem; }
+table.kv td { padding: .55rem .7rem; border: 1px solid #d8ccb4; vertical-align: top;
+        overflow-wrap: anywhere; }
+table.wide th { width: 9rem; }
 table.cmp th, table.cmp td { border: 1px solid #d8ccb4; padding: .45rem .4rem; vertical-align: top;
         font-size: .62rem; line-height: 1.6; text-align: left; }
 .tblwrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -52,7 +53,11 @@ ul.srcs li { margin-bottom: .7rem; }
 .url { font-size: .72rem; color: #4a7a4a; word-break: break-all; }
 footer { margin-top: 2.4rem; padding-top: 1rem; border-top: 2px dashed #c8bca0; font-size: .78rem; color: #5a5446; }
 @media (max-width: 600px) { html { font-size: 26px; } body { padding: 1.2rem .9rem 2rem; }
-  table.cmp { font-size: .62rem; } table.cmp th, table.cmp td { padding: .3rem .25rem; } }
+  table.cmp { font-size: .62rem; } table.cmp th, table.cmp td { padding: .3rem .25rem; }
+  table.kv tr { display: block; margin-bottom: .5rem; border: 1px solid #d8ccb4; }
+  table.kv th, table.kv td { display: block; width: auto; white-space: normal; border: 0; }
+  table.kv th { background: #e7dcc4; padding-bottom: .25rem; }
+  table.kv td { padding-top: .25rem; } }
 @media print { body { background: #fff; padding: 0; } .card, table.cmp thead th { -webkit-print-color-adjust: exact; } }
 @media print { html { font-size: 26px; } }</style>
 </head>
